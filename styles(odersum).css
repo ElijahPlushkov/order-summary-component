@@ -1,0 +1,242 @@
+@import url(https://fonts.google.com/specimen/Red+Hat+Display);
+
+@font-face {
+  font-family: "Red Hat Display";
+  src: url(RedHatDisplay-VariableFont_wght.ttf) format("truetype");
+  font-weight: light;
+  font-style: light;
+}
+
+@font-face {
+  font-family: "Red Hat Display";
+  src: url(RedHatDisplay-Bold.ttf) format("truetype");
+  font-weight: 700;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: "Red Hat Display";
+  src: url(RedHatDisplay-Regular.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Red Hat Display";
+  src: url(RedHatDisplay-Medium.ttf) format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Red Hat Display";
+  src: url(RedHatDisplay-Black.ttf) format("truetype");
+  font-weight: 900;
+  font-style: bolder;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  height: 100%;
+  font-family: "Red Hat Display";
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --summary__payment_color: hsl(223, 47%, 23%);
+  --summary__cancel_color: hsl(245, 75%, 52%);
+  --summary__payment_color_active: hsl(224, 23%, 55%);
+  --summary__price__change_color_active: hsl(224, 23%, 55%);
+  --summary__background_color: hsl(0, 0%, 100%);
+  --summary__price__background_color: hsla(225, 100%, 94%, 0.37);
+  --summary__message_color: hsla(222, 6%, 43%, 0.8);
+  --summary__main-title_color: hsl(223, 47%, 23%);
+  --summary__payment_color: hsl(245, 75%, 52%);
+}
+
+.container {
+  width: 1440px;
+  height: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(pattern-background-desktop.svg);
+  background-size: cover;
+}
+
+.summary__cover-image {
+  border-radius: 20px 20px 0 0;
+}
+
+.summary {
+  background: var(--summary__background_color);
+  max-width: 450px;
+  border-radius: 20px;
+}
+
+.summary__main-title {
+  text-align: center;
+  margin: auto;
+  font-weight: 900;
+  font-size: 28px;
+  padding-top: 50px;
+  padding-bottom: 25px;
+  color: var(--summary__main-title_color);
+}
+
+.summary__message {
+  text-align: center;
+  margin: auto;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 20px;
+  color: var(--summary__message_color);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.summary__price {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: var(--summary__price__background_color);
+  max-width: 350px;
+  height: 90px;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+
+.summary__icon-music {
+  padding: 20px;
+}
+
+.summary__price_conditions {
+  margin-left: -20px;
+  line-height: 10px;
+}
+
+.summary__price__period {
+  font-weight: 900;
+  font-size: 16px;
+  color: var(--summary__main-title_color);
+}
+
+.summary__price__number {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--summary__message_color);
+}
+
+.summary__price__change {
+  font-size: 12px;
+  font-weight: bold;
+  margin-left: 50px;
+  padding: 20px;
+  color: hsl(245, 75%, 52%);
+}
+
+.summary__price__change__link:hover {
+  text-decoration: none;
+  cursor: pointer;
+  color: hsl(224, 23%, 55%);
+}
+
+.summary__payment {
+  appearance: none;
+  margin: auto;
+  display: block;
+  width: 350px;
+  height: 40px;
+  border-radius: 10px;
+  border: solid 0;
+  color: hsl(225, 100%, 98%);
+  background-color: var(--summary__payment_color);
+  font-weight: bold;
+  font-size: 12px;
+  box-shadow: 0 15px 15px 7px hsla(225, 4%, 82%, 0.5);
+  margin-bottom: 25px;
+}
+
+.summary__payment:hover {
+  cursor: pointer;
+  background-color: hsla(245, 75%, 52%, 0.7);
+}
+
+.summary__cancel {
+  appearance: none;
+  margin: auto;
+  display: block;
+  width: 350px;
+  margin-bottom: 50px;
+  border: solid 0;
+  background-color: var(--summary__background_color);
+  color: var(--summary__message_color);
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.summary__cancel:hover {
+  cursor: pointer;
+  color: hsl(220, 2%, 33%);
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    width: 385px;
+    display: inline-block;
+    background: hsla(225, 100%, 94%, 0.37);
+  }
+
+  .summary__cover-image {
+    width: 375px;
+  }
+  .summary {
+    width: 375px;
+    margin-left: 5px;
+  }
+  .summary__main-title {
+    padding-top: 25px;
+    padding-bottom: 20px;
+  }
+
+  .summary__message {
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 20px;
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .summary__price {
+    max-width: 330px;
+    margin-bottom: 20px;
+  }
+
+  .summary__price__change {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .summary__payment {
+    width: 330px;
+    height: 50px;
+    font-size: 15px;
+  }
+
+  .summary__cancel {
+    width: 330px;
+    padding-bottom: 30px;
+    font-size: 15px;
+    font-weight: bold;
+  }
+}
